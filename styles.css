@@ -1,9 +1,16 @@
-body, html{
+html{
   height:100%;
 }
 body{
-  margin: 0px;
+  height: 80%;
+  width: 80%;
+  margin: 20px;
   background-color:#444;
+  background-image: url("https://cdn.hipwallpaper.com/i/19/5/7O2Pyi.jpg");
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -11,44 +18,54 @@ body, a:link, a:visited, a:active{
 }
 
 .lineUpDancers {
-top: 50%;
-left: 50%;
-border: 1px solid red;
-position: absolute;
+  top: 20%;
+  left: 10%;
+  display: flex;
+  flex-flow: wrap;
+}
+.verticalLineUp {
+  top: 10%;
+  left: 20%;
+  display: flex;
+  flex-flow: column wrap;
 }
 
-.title, .addShaq, .addLebron, .addDurant, .lineUp {
+.addShaq, .addLebron, .addDurant, .lineUp, .lineUpV {
   padding:5px 12px;
   float:right;
 }
+
+
 .topbar{
   height:32px;
   background-color: #555;
 }
 .title{
   background-color: #777;
+  padding:5px 12px;
+  float:left;
 }
 .dancer{
   border-radius:10px;
   position:relative;
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
 
 }
 
 .shaq {
-  height:150px;
-  width: 150px;
+  height:125px;
+  width: 125px;
 }
 
 .lebron {
-  height:150px;
-  width: 150px;
+  height:125px;
+  width: 125px;
 }
 
 .durant {
-  height:150px;
-  width: 150px;
+  height:125px;
+  width: 125px;
 }
 
 .shaq:hover {

@@ -23,9 +23,9 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer = new Shaq(
-      600 * Math.random(),
-      1200 * Math.random(),
-      2000
+      Math.floor($("body").height() * Math.random()),
+      Math.floor($("body").width() * Math.random()),
+      1000
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
@@ -38,7 +38,7 @@ $(document).ready(function() {
     var dancer = new Lebron(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
-      2000
+      5000
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
@@ -51,7 +51,7 @@ $(document).ready(function() {
     var dancer = new Durant(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
-      2000
+      5000
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
@@ -63,14 +63,16 @@ $(document).ready(function() {
 
   //Line Up
   $('.lineUp').on('click', function(event) {
-    // Loop through the window[dancers] array
-    for(var i = 0; i < window.dancers.length; i++) {
-      // append them into the div container
-      $('.lineUpDancers').append(window.dancers[i].$node);
-    }
-
+    // append them into the div container
+    $('.lineUpDancers').append($('.lebron'), $('.durant'), $('.shaq'));
   });
 
+  $('body').append("<div class='verticalLineUp'></div>")
+  //Line Up Vertically
+  $('.lineUpV').on('click', function(event) {
+    // append them into the div container
+    $('.verticalLineUp').append($('.lebron'), $('.durant'), $('.shaq'));
+  });
 
 });
 
