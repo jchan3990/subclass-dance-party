@@ -4,7 +4,6 @@ describe('shaq', function() {
   var timeBetweenSteps = 100;
 
   beforeEach(function() {
-    clock = sinon.useFakeTimers();
     shaq = new Shaq(10, 20, timeBetweenSteps);
   });
 
@@ -12,27 +11,58 @@ describe('shaq', function() {
     expect(shaq.$node).to.be.an.instanceof(jQuery);
   });
 
-  it('should have a class name called shaq', function () {
-    expect('.')
+  it('shaq.setPosition should be a function', function () {
+    expect(typeof shaq.setPosition).to.equal('function')
   })
 
-  it('should append shaq to body', function() {
-    sinon.spy(shaq.$node, 'toggle');
-    //shaq.step();
-    expect(shaq.$node.toggle.called).to.be.true;
+  it(`should have a 'setPosition' method that is inherited from dancer`, function() {
+    expect(shaq.setPosition).to.be.a('function');
   });
 
-  describe('dance', function() {
-    it('should call step at least once per second', function() {
-      sinon.spy(shaq, 'step');
-      expect(shaq.step.callCount).to.be.equal(0);
-      clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
-      clock.tick(timeBetweenSteps);
+});
 
-      expect(shaq.step.callCount).to.be.equal(1);
+describe('lebron', function() {
 
-      clock.tick(timeBetweenSteps);
-      expect(shaq.step.callCount).to.be.equal(2);
-    });
+  var lebron, clock;
+  var timeBetweenSteps = 100;
+
+  beforeEach(function() {
+    lebron = new Lebron(10, 20, timeBetweenSteps);
   });
+
+  it('should have a jQuery $node object', function() {
+    expect(lebron.$node).to.be.an.instanceof(jQuery);
+  });
+
+  it('shaq.setPosition should be a function', function () {
+    expect(typeof lebron.setPosition).to.equal('function')
+  })
+
+  it(`should have a 'setPosition' method that is inherited from dancer`, function() {
+    expect(lebron.setPosition).to.be.a('function');
+  });
+
+});
+
+describe('durant', function() {
+
+  var durant, clock;
+  var timeBetweenSteps = 100;
+
+  beforeEach(function() {
+    durant = new Durant(10, 20, timeBetweenSteps);
+  });
+
+  it('should have a jQuery $node object', function() {
+    expect(durant.$node).to.be.an.instanceof(jQuery);
+  });
+
+  it('shaq.setPosition should be a function', function () {
+    expect(typeof durant.setPosition).to.equal('function')
+  })
+
+  it(`should have a 'setPosition' method that is inherited from dancer`, function() {
+    expect(durant.setPosition).to.be.a('function');
+  });
+
 });
