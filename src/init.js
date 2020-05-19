@@ -23,8 +23,8 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer = new Shaq(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      600 * Math.random(),
+      1200 * Math.random(),
       2000
     );
     $('body').append(dancer.$node);
@@ -58,16 +58,26 @@ $(document).ready(function() {
   });
 
   // Create empty div container
+  $('body').append("<div class='lineUpDancers'></div>")
   // Place container in the middle of the body
 
   //Line Up
   $('.lineUp').on('click', function(event) {
-
     // Loop through the window[dancers] array
-    // Store them into the div container
+    for(var i = 0; i < window.dancers.length; i++) {
+      // append them into the div container
+      $('.lineUpDancers').append(window.dancers[i].$node);
+    }
 
   });
 
 
 });
 
+// //.rotateimg180 {
+//   -webkit-transform:rotate(180deg);
+//   -moz-transform: rotate(180deg);
+//   -ms-transform: rotate(180deg);
+//   -o-transform: rotate(180deg);
+//   transform: rotate(180deg);
+// }
