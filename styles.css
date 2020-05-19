@@ -9,7 +9,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addShaq, .addLebron, .addDurant {
+.title, .addShaq, .addLebron, .addDurant, .lineUp {
   padding:5px 12px;
   float:right;
 }

@@ -28,6 +28,7 @@ $(document).ready(function() {
       2000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
   });
 
     //lebron
@@ -40,6 +41,7 @@ $(document).ready(function() {
       2000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
   });
 
   //durant
@@ -52,6 +54,20 @@ $(document).ready(function() {
       2000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
   });
+
+  // Create empty div container
+  // Place container in the middle of the body
+
+  //Line Up
+  $('.lineUp').on('click', function(event) {
+
+    // Loop through the window[dancers] array
+    // Store them into the div container
+
+  });
+
+
 });
 
