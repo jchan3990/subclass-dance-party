@@ -74,6 +74,44 @@ $(document).ready(function() {
     $('.verticalLineUp').append($('.lebron'), $('.durant'), $('.shaq'));
   });
 
+  $(".lebron").on('click', function(event) {
+    $(".lebron").animate({left: '+=20px'}, "slow")
+  });
+
+  // Create div in center of body
+  $('body').append("<div class='focus'></div>");
+  $('body').append("<div class ='leftBox'></div>");
+  $('body').append("<div class ='rightBox'></div>");
+
+  $(document).on('click', '.shaq', function() {
+    $('.leftBox').append($('.shaq'));
+    $('.focus').append($(this));
+    //append all durant into right box
+    $('.rightBox').append($('.durant'));
+    //append all lebron into left box
+    $('.leftBox').append($('.lebron'));
+  })
+
+  $(document).on('click', '.lebron', function() {
+    $('.rightBox').append($('.lebron'));
+    $('.focus').append($(this));
+    //append all durant into right box
+    $('.rightBox').append($('.durant'));
+    //append all lebron into left box
+    $('.leftBox').append($('.shaq'));
+  })
+
+  $(document).on('click', '.durant', function() {
+    $('.rightBox').append($('.durant'));
+    $('.rightBox').append($('.durant'));
+    $('.focus').append($(this));
+    //append all durant into right box
+    $('.rightBox').append($('.lebron'));
+    //append all lebron into left box
+    $('.leftBox').append($('.shaq'));
+  })
+
+
 });
 
 // //.rotateimg180 {

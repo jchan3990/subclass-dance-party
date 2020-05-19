@@ -12,9 +12,13 @@ describe('shaq', function() {
     expect(shaq.$node).to.be.an.instanceof(jQuery);
   });
 
-  it('should have a step function that makes its node blink', function() {
+  it('should have a class name called shaq', function () {
+    expect('.')
+  })
+
+  it('should append shaq to body', function() {
     sinon.spy(shaq.$node, 'toggle');
-    shaq.step();
+    //shaq.step();
     expect(shaq.$node.toggle.called).to.be.true;
   });
 

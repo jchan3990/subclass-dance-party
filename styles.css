@@ -1,5 +1,6 @@
 html{
   height:100%;
+  width: auto;
 }
 body{
   height: 80%;
@@ -11,7 +12,7 @@ body{
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  font-size: 18px;
+  font-size: 14px;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -22,12 +23,39 @@ body, a:link, a:visited, a:active{
   left: 10%;
   display: flex;
   flex-flow: wrap;
+  width:auto;
 }
+
 .verticalLineUp {
   top: 10%;
   left: 20%;
   display: flex;
   flex-flow: column wrap;
+  height: 100%;
+}
+
+.focus {
+  top: 50%;
+  left: 50%;
+  height: 125px;
+  width: 125px;
+  position: absolute;
+}
+
+.leftBox {
+  top: 20%;
+  left: 25%;
+  height: 125px;
+  width: 125px;
+  position: absolute;
+}
+
+.rightBox {
+  top: 20%;
+  left: 75%;
+  height: 125px;
+  width: 125px;
+  position: absolute;
 }
 
 .addShaq, .addLebron, .addDurant, .lineUp, .lineUpV {
@@ -37,17 +65,18 @@ body, a:link, a:visited, a:active{
 
 
 .topbar{
-  height:32px;
-  background-color: #555;
+  height:26px;
+  background-color: rgb(3, 3, 3);
+
 }
 .title{
-  background-color: #777;
+  background-color: rgb(3, 3, 3);
   padding:5px 12px;
   float:left;
 }
 .dancer{
   border-radius:10px;
-  position:relative;
+  position:absolute;
   height: 100px;
   width: 100px;
 
@@ -56,26 +85,30 @@ body, a:link, a:visited, a:active{
 .shaq {
   height:125px;
   width: 125px;
+  transition: transform 1s ease-in-out;
 }
 
 .lebron {
   height:125px;
   width: 125px;
+  transition: transform 1s ease-in-out;
+
 }
 
 .durant {
   height:125px;
   width: 125px;
+  transition: transform 1s ease-in-out;
 }
 
 .shaq:hover {
-  transform: rotate(90deg);
+  transform: rotate(360deg);
 }
 
 .lebron:hover {
-  transform: rotate(90deg);
+  transform: rotate(360deg);
 }
 
 .durant:hover {
-transform: rotate(90deg);
+transform: rotate(360deg);
 }
